@@ -10,13 +10,16 @@ S, k = input().split()
 # for i in list(itertools.combinations(sorted(emptyList), int(k))):
 #   print(i)
 
+# for r in range(1, int(k) + 1):
+#   for i in list(itertools.combinations(sorted(list(S)), r)):
+#     combi = ''
+#     for e in list(i):
+#       combi+=e
+#     print(combi)
+
 for r in range(1, int(k) + 1):
   for i in list(itertools.combinations(sorted(list(S)), r)):
-    combi = ''
-    for e in list(i):
-      combi+=e
-    print(combi)
-
+    print("".join(list(i)))
 
 
 # print(*itertools.combinations(S, int(k)))

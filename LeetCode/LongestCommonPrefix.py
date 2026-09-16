@@ -4,13 +4,10 @@ def longestCommonPrefix(strs):
   :type strs: List[str]
   :rtype: str
   """
-
-  prefixes = Counter()
   if not strs:
     return ""
-
-  prefixes = Counter()
-  for word in strs:
-    prefixes[word[0:2]] += 1
-  
-  return max(prefixes, key=prefixes.get)
+  for i in range(len(strs[0])):
+    for j in range(1, len(strs)):
+      if i >= len(strs[j]) or strs[j][i] != strs[0][i]:
+        return strs[0][:i]
+  return strs[0]

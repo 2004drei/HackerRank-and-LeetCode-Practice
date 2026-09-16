@@ -13,10 +13,10 @@ def mergeTwoLists(list1, list2):
 
   mergedList = sorted(to_list(list1) + to_list(list2))
 
-  dummy = ListNode(0)
-  current = dummy
-  for val in mergedList:
-    current.next = ListNode(val)
-    current = current.next
+  # dummy = ListNode(0)
+  # current = dummy
+  # for val in mergedList:
+  #   current.next = ListNode(val)
+  #   current = current.next
 
-  return dummy.next
+  # return dummy.next
